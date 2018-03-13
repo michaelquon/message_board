@@ -28,7 +28,7 @@ _comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}]
 }, { timestamps: true });
 //Creating my one to Many link from Post Model to Comment Model.
 var CommentSchema = new mongoose.Schema({
-    name: {type: String, required: true},
+    name: {type: String, required: true, minlength:4},
     comment: {type: String, required: true},
     _post: {type: Schema.Types.ObjectId, ref:'Post'},
 }, {timestamps: true});
